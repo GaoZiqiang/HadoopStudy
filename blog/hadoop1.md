@@ -11,7 +11,6 @@
     
 ![知识框架](http://img.blog.csdn.net/20170717140628871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM0Mjk5Njg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ## **3 Hadoop与分布式开发**
-
     参照下图了解Hadoop与分布式开发的基本流程，详细步骤会在后续学习中讲解。
 
 
