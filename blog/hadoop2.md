@@ -1,7 +1,7 @@
 # Hadoop系列－－Incompatible namespaceIDs问题的解决
 ## **1 问题描述**
 　　使用jps命令查看Hadoop进程启动情况，发现datanode总是启动不起来。查看log，如下：
-　　
+
 
 ```
 2017-08-11 14:46:04,213 ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: java.io.IOException: Incompatible namespaceIDs in /hadoop/data: namenode namespaceID = 179997037; datanode namespaceID = 331494645
@@ -19,10 +19,13 @@ Incompatible namespaceIDs in /hadoop/data: namenode namespaceID = 179997037; dat
 　　两个namespacesID出现冲突。
 ## **4 问题解决**
 　　查阅了好多资料，没有找到一个永久的解决方法。
-　　下面的两个解决方法可以作为参考，其中第二个是我采用的方法，缺点就是每次format之前都要手动删除{dfs.data.dir}/data/目录，很麻烦。
+
+    下面的两个解决方法可以作为参考，其中第二个是我采用的方法，缺点就是每次format之前都要手动删除{dfs.data.dir}/data/目录，很麻烦。
+
 　　首先查看core-site.xml和hdfs-site.xml文件中{dfs.data.dir}和{dfs.name.dir}的位置。
 ### **4.1 失败的解决方法**
 　　按照blog的提示，修改{dfs.data.dir}/current/VERSION和{dfs.name.dir}/VERSION中`namespaceID`，使两者一致。
+
 　　具体解决步骤如下：
 **1.stop the datanode**
 　　命令
