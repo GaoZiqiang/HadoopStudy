@@ -48,11 +48,14 @@ layoutVersion=-41
 **3.restart the datanode**
 ### **4.2 成功的解决方法**
 **1.stop the datanode**
+
 　　命令
 > bin/stop-all.sh
 
 **2.手动删除{dfs.data.dir}/data/目录**
+
 　　首先查看core-site.xml和hdfs-site.xml文件中{dfs.data.dir}和{dfs.name.dir}的位置；然后手动删除{dfs.data.dir}/data/目录。
+
 **3.restart the datanode**
 ## **5 优化解决**
 　　能否找到一个更好的方法，不用每次都要手动删除{dfs.data.dir}/data/目录，太麻烦。
