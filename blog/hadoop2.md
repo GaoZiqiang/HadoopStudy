@@ -27,11 +27,14 @@ Incompatible namespaceIDs in /hadoop/data: namenode namespaceID = 179997037; dat
 　　按照blog的提示，修改{dfs.data.dir}/current/VERSION和{dfs.name.dir}/VERSION中`namespaceID`，使两者一致。
 
 　　具体解决步骤如下：
+
 **1.stop the datanode**
+
 　　命令
 > bin/stop-all.sh
 
 **2.修改{dfs.data.dir}/current/VERSION和{dfs.name.dir}/VERSION中`namespaceID`**
+
 　　文件大体内容如下：
 ```
 #Fri Aug 11 15:45:09 CST 2017
