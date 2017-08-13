@@ -2,9 +2,11 @@
 ## **1 安装步骤简介**
 ### **1.1 前言**
 　　讲真，上次的Hadoop的安装实际上是失败的，正应了那句话，Hadoop的学习是有一定的门槛的，从Hadoop的安装就可见一斑。
+
 　　最近看了一些关于Hadoop的理论知识，对Hadoop的理解更进了一步，便决定重新安装一次Hadoop。
 ### **1.2 安装大体步骤**
 　　因为Hadoop是Java语言开发的，所以必然需要Java的运行环境，那么就需要配置JDK，鉴于开发的效率，Linux系统环境是最理想的开发环境了，那么可以1配置Linux虚拟机或者2购买远程Linux主机或者3直接安装Linux系统；最后安装配置Hadoop即可。
+
 　　总体来说，大体步骤如下：
 
  - 准备Hadoop系统环境
@@ -24,9 +26,13 @@
 
 ### **2.2 配置JDK**
 **1.下载JDK**
+
 **2.安装JDK**
+
 **3.配置环境变量**
+
 　　可以配置.bashrc和/etc/profile两个文件，但是.bashrc的优先级高于/etc/profile。
+
 　　个人参照如下：
 　　
 
@@ -40,15 +46,20 @@
 
 ### **2.3 安装Hadoop**
 　　经过十多年的发展，Hadoop已经发布了ver1.x和ver2.x两套版本，ver1.x比较稳定。故在这使用ver1.2版本。
+
 **1.下载hadoop.1.2.1.tar.gz**
+
 **2.安装Hadoop**
+
 　　使用命令在相应的目录下：
 　　
 
 > tar -zxvf hadoop.1.2.1.tar.gz
 
 ### **2.4 配置Hadoop**
+
 **1.配置四个文件**
+
 **A.core-site.xml**
 
 ```
@@ -90,6 +101,7 @@
 ```
 
 **D.hadoop-env.xml**
+
 　　配置$JAVA_HOME
 
 ```
@@ -97,6 +109,7 @@ export $JAVA_HOME=/home/gaoziqiang/devel/jdk/jdk_8/jdk1.8.0
 ```
 
 **2.声明$HADOOP_HOME环境变量**
+
 　　在/etc/profile文件。
 　　
 
@@ -106,18 +119,21 @@ export HADOOP_HOME=/home/gaoziqiang/devel/hadoop/hadoop-1.2.1
 
 ## **3 启动Hadoop**
 **1初始化文件系统**
+
 　　在HADOOP_HOME/bin：
 　　
 
 > ./hadoop namenode -format
 
 ** 2.启动Hadoop**
+
 　　在HADOOP_HOME/bin：
 　　
 
 > ./start-all.sh
 
 ** 3.检测是否启动成功**
+
 　　使用命令:
 
 > jps
