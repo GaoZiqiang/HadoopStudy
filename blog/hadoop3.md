@@ -125,14 +125,14 @@ export HADOOP_HOME=/home/gaoziqiang/devel/hadoop/hadoop-1.2.1
 
 > ./hadoop namenode -format
 
-** 2.启动Hadoop**
+**2.启动Hadoop**
 
 　　在HADOOP_HOME/bin：
 　　
 
 > ./start-all.sh
 
-** 3.检测是否启动成功**
+**3.检测是否启动成功**
 
 　　使用命令:
 
